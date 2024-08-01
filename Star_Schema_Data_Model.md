@@ -14,6 +14,6 @@ A measures table to hold DAX measures was also created.
 
 Below is an image of the schema
 
-![schema](Star_Schema_data_model_image.jpg)
+![schema](/images/Star_Schema_data_model_image.jpg)
 
 

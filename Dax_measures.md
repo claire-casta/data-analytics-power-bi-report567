@@ -43,3 +43,9 @@ Total Quantity = sum(Orders[Product Quantity])
 Multiplies the Orders[Product Quantity] column by the Products[Sale_Price] column for each row, and then sums the result
 
 Total Revenue = SUMX(Orders, Orders[Product Quantity] * RELATED(Products[Sales Price]))
+
+## Revenue per Customer
+
+[Total Revenue] divided by the [Total Customers].
+
+Revenue Per Customer = 'Measures Table'[Total Revenue]/'Measures Table'[Total Customers]

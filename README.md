@@ -24,13 +24,10 @@ The exploratory data analysis has several steps built into the project:
    -  Create key measures - Key measures in DAX are referenced in the [Measures](/Dax_measures.md).
    -  Create date and geography hierarchies - Date and geography hierarchies were created, for more detail see [Date Hierarchy](/Dax_tables_columns.md#date-hierarchy) and [Geography Hierarchy](/Dax_tables_columns.md#geography-columns--hierarchy)
 3. Set up the report:
-   - Create the report page
-   - Add a navigation sidebar
+   - Create the report page - Four report pages were created - see [Report Format](report_format.md)
+   - Add a navigation sidebar - A sidebar was created see [Report Format](report_format.md)
 4. Build the customer detail page:
-    - copy
-    - list
-    - from
-    - milestone 5
+    - A Report page was designed that focused on customer level analysis and contained interactive visuals. For more details see [Customer Detail](Report_format.md#customer-detail-page)
 5. Create an executive summary page:
     - copy
     - list
