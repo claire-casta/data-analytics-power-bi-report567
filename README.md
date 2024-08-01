@@ -10,16 +10,19 @@ The report will present a high-level business summary tailored for C-suite execu
 ## Project Description
 A description of the project: what it does, the aim of the project, and what you learned.
 
-This project ....
+This project .... ADD MORE DETAILS TO THIS BIT
 
 The exploratory data analysis has several steps built into the project:
-1. Import and transform the data from vaious sources into Power BI
+1. Import and transform the data from various sources into PowerBI
+   
+   This involved importing data from Azure SQL database, Azure blob storage, and cloud hosted .csv and .zip files, ensuring appropriate data transformations are done inside Power Query prior to importation into the PowerBI datamodel. Tranformations included column splitting, merging, removal and addition, as well as removal of duplicate data, removal of rows with missing data, combining multiple tables into one, and renaming columns for consistency and clarity and to align with Power Bi naming conventions.
+
 2. Create the data model:
-   -  Create a date table
-   -  Build the star schema data model
-   -  Create a measures table
-   -  Create key measures
-   -  Create date and geography hierarchies
+   -  Create a date table - A date table was created using dax, for more detail see [Date Table](/Dax_tables_columns#date-table).
+   -  Build the star schema data model - A Star Schema Data Model was created, for more detail see [Star Schema](/Star_Schema_Data_Model.md)
+   -  Create a measures table - A measures table was created and can be seen in the [Star Schema](/Star_Schema_Data_Model.md).
+   -  Create key measures - Key measures in DAX are referenced in the [Measures](/Dax_measures).
+   -  Create date and geography hierarchies - Date and geography hierarchies were created, for more detail see [Date Hierarchy](/Dax_tables_columns#date-hierarchy) and [Geography Hierarchy](/Dax_tables_columns.md#geography-columns--hierarchy)
 3. Set up the report:
    - Create the report page
    - Add a navigation sidebar
