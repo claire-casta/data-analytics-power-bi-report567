@@ -18,11 +18,11 @@ The exploratory data analysis has several steps built into the project:
    This involved importing data from Azure SQL database, Azure blob storage, and cloud hosted .csv and .zip files, ensuring appropriate data transformations are done inside Power Query prior to importation into the PowerBI datamodel. Tranformations included column splitting, merging, removal and addition, as well as removal of duplicate data, removal of rows with missing data, combining multiple tables into one, and renaming columns for consistency and clarity and to align with Power Bi naming conventions.
 
 2. Create the data model:
-   -  Create a date table - A date table was created using dax, for more detail see [Date Table](/Dax_tables_columns#date-table).
+   -  Create a date table - A date table was created using dax, for more detail see [Date Table](/Dax_tables_columns.md#date-table).
    -  Build the star schema data model - A Star Schema Data Model was created, for more detail see [Star Schema](/Star_Schema_Data_Model.md)
    -  Create a measures table - A measures table was created and can be seen in the [Star Schema](/Star_Schema_Data_Model.md).
-   -  Create key measures - Key measures in DAX are referenced in the [Measures](/Dax_measures).
-   -  Create date and geography hierarchies - Date and geography hierarchies were created, for more detail see [Date Hierarchy](/Dax_tables_columns#date-hierarchy) and [Geography Hierarchy](/Dax_tables_columns.md#geography-columns--hierarchy)
+   -  Create key measures - Key measures in DAX are referenced in the [Measures](/Dax_measures.md).
+   -  Create date and geography hierarchies - Date and geography hierarchies were created, for more detail see [Date Hierarchy](/Dax_tables_columns.md#date-hierarchy) and [Geography Hierarchy](/Dax_tables_columns.md#geography-columns--hierarchy)
 3. Set up the report:
    - Create the report page
    - Add a navigation sidebar
