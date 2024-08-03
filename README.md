@@ -29,10 +29,7 @@ The exploratory data analysis has several steps built into the project:
 4. Build the customer detail page:
     - A Report page was designed that focused on customer level analysis and contained interactive visuals. For more details see [Customer Detail](Report_format.md#customer-detail-page)
 5. Create an executive summary page:
-    - copy
-    - list
-    - from
-    - milestone 6
+    - A Report page was designed to provide a high level summary of company-wide performance for the executive team. For more details see [Executive Summary](Report_format.md#executive-summary-page)
 6. Create a product detail page:
     - copy
     - list
