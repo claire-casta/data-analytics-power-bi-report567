@@ -51,8 +51,8 @@ The following elements have been added
 -  Donut Chart to show [Total Revenue] by Store[Store Type] which details the revenue by store type.
 -  Bar Chart (horizontal) to show [Total Orders by Category] with data labels to 1 decimal place.
 -  KPI Visuals to show KPIs for Quarterly Revenue, Orders and Profit
-   -  For each of these a measure for the previous quarters performance was created which are documented [here](Dax_measures.md).
-   -  Then a Target measure for each was created which was set at 105% of the performance of the previous quarter. These are documented [here](Dax_measures.md).
+   -  For each of these a measure for the previous quarters performance was created which are documented [here](Dax_measures.md#previous-quarter-orders).
+   -  Then a Target measure for each was created which was set at 105% of the performance of the previous quarter. These are documented [here](Dax_measures.md#quarterly-order-target).
    -  KPI Visual created for each with values at 1 decimal place.
    -  The Trend Axis was set to on and the following properties set
        - Direction : High is Good
