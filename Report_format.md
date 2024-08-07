@@ -67,4 +67,54 @@ Below is a final screenshot of the page. Again the  layout chosen is different t
 
 ![exec summary](images/exec_summary_page.JPG)
 
+## Product Detail
 
+This is a detailed product page for the project that provides an in depth look at which products within the inventory are performing well with the option to filter by product and region. The elements on this page are as follows
+
+- 3 Gauges showing current-quarter performance of Orders, Revenue and Profit against a quarterly target (110% of previous quarter performance)
+  - 3 new measures were created for the current quarter performance
+    -  [Current Quarter Orders](Dax_measures.md#current-quarter-orders)
+    -  [Current Quarter Profit](Dax_measures.md#current-quarter-profit)
+    -  [Current Qaurter Revenue](Dax_measures.md#current-quarter-revenue)
+  - 3 new measures were created for the 10% targets based on the previous quarter performance as below 
+    - [Quarterly Order Target 10%](Dax_measures.md#quarterly-order-target-10)
+    - [Quarterly Profit Target 10%](Dax_measures.md#quarterly-profit-target-10) 
+    - [Quarterly Revenue Target 10%](Dax_measures.md#quarterly-revenue-target-10)
+  - However, when these target measure were used, they did not display any data. Further investigation determined this was because the underlying "previous quarter" measures were using PREVIOUSQUARTER and as the data only goes to mid 2023, there is no data in the previous quarter from the current date. The following measures were modified to select the previous quarter based on the max date in the date table.
+    - [Previous Quarter Orders](Dax_measures.md#previous-quarter-orders)
+    - [Previous Quarter Profit](Dax_measures.md#previous-quarter-profit)
+    - [Previous Quarter Revenue](Dax_measures.md#previous-quarter-revenue)
+  - 3 new measures for the gap between target and the current month
+  - Max value was set the target level so the guage shows as full when the target is met
+  - Conditional formatting was applied to the callout value, using the gap measures to highlight the text in red if below target and black otherwise.
+ 
+    ![exec summary](images/product_gauges.JPG)
+- 2 Filter state cards to show the status of the filters that will be applied via slicers with a measure for [category](Dax_measures.md#category-selection) and one for [country](Dax_measures#country-selection)
+- An area chart showing the different product categories performance in revenue over time. 
+  - x axis = Dates{Start of Quarter]
+  - Y axus = [Total Revenue]
+  - Legend = Products[Category]
+- A top 10 products table (using the table on the customer detail page as a base) with the following colums
+  - Product description
+  - Total Revenue
+  - Total Customers
+  - Total Orders
+  - Profit per Order (this was a new [measure](Dax_measures.md#profit-per-order))
+- Scatter Graph to show which products are both high selling and high profit. 
+  - New calculated column called [Profit per Item] in the products table was created (detailed [here](Dax_tables_columns.md#profit-per-item))
+  - Values  =  Products[Description]
+  - X Axis =  Prducts[Profit per item]
+  - Y Axis = [Total Orders]
+  - Legend = Products[Category]
+- A slicer toolbar was created to allow the selection of categories and countries to analyse but without cluttering the main page. 
+  - A filter button was added to the nav bar and a rectangle shape to the page to contain the filters
+  - Two slicers were added 
+    - Category Slicer set to Products[Category] with multi item selection
+    - Country Slicer set to Stores[Country] with a Select All opion
+  - Added a back button to the rectangle
+  - Create two bookmarks (one with the slicer toolbar showing and one without) and assign as actions to the two buttons to allow the toolbar to be shown and hidden by the user.
+    ![slicer toolbar](images/slicer_product_toolbar.JPG)
+
+Below is a final screenshot of the page. Again the  layout chosen is different to the examples given as a title has been added for easy visual ID of the page that is being viewed as this report could be viewed outside of PowerBI (such as a powerpoint). The key metric gauges are displayed at the tope of the page to draw the viewers attention.
+
+![product detail page](images/product_detail_page.JPG)

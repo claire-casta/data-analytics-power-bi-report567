@@ -31,10 +31,7 @@ The exploratory data analysis has several steps built into the project:
 5. Create an executive summary page:
     - A Report page was designed to provide a high level summary of company-wide performance for the executive team. For more details see [Executive Summary](Report_format.md#executive-summary-page)
 6. Create a product detail page:
-    - copy
-    - list
-    - from
-    - milestone 7
+    - A report page was designed to allow detailed product level analysis to determine which products are performing well overall and in particular categories and countries. For more details see [Product Detail](Report_format.md#product-detail)
 7. Create a stores map page:
     - Add a map visual
     - Add a country slicer

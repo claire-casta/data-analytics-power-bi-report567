@@ -56,11 +56,29 @@ Counts the number of orders in the previous quarter
 
 Previous Quarter Orders = CALCULATE( [Total Orders], PREVIOUSQUARTER('Date'[Date]))
 
+Modifed as data in project ends in mid 2023 so PREVIOUSQUARTER returns no data on page tied to todays date.
+
+Previous Quarter Orders = 
+VAR CurrentQuarterStart = MAX('Date'[Start of Quarter])
+VAR PreviousQuarterStart = EDATE(CurrentQuarterStart, -3)
+VAR PreviousQuarterEnd = EDATE(CurrentQuarterStart, -1)
+RETURN
+CALCULATE([Total Orders], 'Date'[Start of Quarter] = PreviousQuarterStart)
+
 ## Previous Quarter Profit
 
 Calculates the previous quarters profit level
 
 Previous Quarter Profit = CALCULATE( [Total Profit] , PREVIOUSQUARTER('Date'[Date]))
+
+Modifed as data in project ends in mid 2023 so PREVIOUSQUARTER returns no data on page tied to todays date.
+
+Previous Quarter Profit = 
+VAR CurrentQuarterStart = MAX('Date'[Start of Quarter])
+VAR PreviousQuarterStart = EDATE(CurrentQuarterStart, -3)
+VAR PreviousQuarterEnd = EDATE(CurrentQuarterStart, -1)
+RETURN
+CALCULATE([Total Profit], 'Date'[Start of Quarter] = PreviousQuarterStart)
 
 ## Previous Quarter Revenue
 
@@ -68,20 +86,75 @@ Calculates the previous quarters revenue level
 
 Previous Quarter Revenue = CALCULATE( [Total Revenue] , PREVIOUSQUARTER('Date'[Date]))
 
-## Quarterly Order Target
+Modifed as data in project ends in mid 2023 so PREVIOUSQUARTER returns no data on page tied to todays date.
+
+Previous Quarter Revenue = 
+VAR CurrentQuarterStart = MAX('Date'[Start of Quarter])
+VAR PreviousQuarterStart = EDATE(CurrentQuarterStart, -3)
+VAR PreviousQuarterEnd = EDATE(CurrentQuarterStart, -1)
+RETURN
+CALCULATE([Total Revenue], 'Date'[Start of Quarter] = PreviousQuarterStart)
+
+## Quarterly Order Target 5%
 
 Calculates the order target for the quarter by increasing the performance of the last quarter by 5% (multiply by 105%)
 
 Quarterly Order Target = 'Measures Table'[Previous Quarter Orders] * 1.05
 
-## Quarterly Profit Target
+## Quarterly Profit Target 5%
 
 Calculates the profit target for the quarter by increasing the performance of the last quarter by 5% (multiply by 105%)
 
 Quarterly Profit Target = 'Measures Table'[Previous Quarter Profit] * 1.05
 
-## Quarterly Revenue Target
+## Quarterly Revenue Target 5%
 
 Calculates the revenue target for the quarter by increasing the performance of the last quarter by 5% (multiply by 105%)
 
 Quarterly Revenue Target = 'Measures Table'[Previous Quarter Revenue] * 1.05
+
+## Current Quarter Orders 
+
+Current Quarter Orders = CALCULATE( [Total Orders], DATESQTD('Date'[Date]))
+
+## Current Quarter Profit
+
+Current Quarter Profit = CALCULATE( [Total Profit], DATESQTD('Date'[Date]))
+
+## Current Quarter Revenue 
+
+Current Quarter Revenue = CALCULATE( [Total Revenue], DATESQTD('Date'[Date]))
+
+## Quarterly Order Target 10% 
+
+Calculates the order target for the quarter by increasing the performance of the last quarter by 10% (multiply by 110%)
+
+Quarterly Order Target 10%  = 'Measures Table'[Previous Quarter Orders] * 1.1
+
+## Quarterly Profit Target 10% 
+
+Calculates the profit target for the quarter by increasing the performance of the last quarter by 10% (multiply by 110%)
+
+Quarterly Profit Target 10% = 'Measures Table'[Previous Quarter Profit] * 1.1
+
+## Quarterly Revenue Target 10% 
+
+Calculates the revenue target for the quarter by increasing the performance of the last quarter by 10% (multiply by 110%)
+
+Quarterly Revenue Target 10% = 'Measures Table'[Previous Quarter Revenue] * 1.1
+
+## Category Selection
+
+Showing the category filter selected
+
+Category Selection = IF(ISFILTERED(Products[Category]), SELECTEDVALUE(Products[Category], "No Selection"), "No Selection")
+
+## Country Selection
+
+Showing the country filter selected
+
+Country Selection = IF(ISFILTERED(Stores[Country]), SELECTEDVALUE(Stores[Country],"No Selection"))
+
+## Profit per Order
+
+Profit Per Order = 'Measures Table'[Total Profit] / 'Measures Table'[Total Orders]
