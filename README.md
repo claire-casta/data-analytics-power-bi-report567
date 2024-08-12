@@ -33,10 +33,9 @@ The exploratory data analysis has several steps built into the project:
 6. Create a product detail page:
     - A report page was designed to allow detailed product level analysis to determine which products are performing well overall and in particular categories and countries. For more details see [Product Detail](Report_format.md#product-detail)
 7. Create a stores map page:
-    - Add a map visual
-    - Add a country slicer
-    - Create a stores drillthrough page
-    - Create a stores tooltip page
+    - A stores map page was created to allow regional managers to easily check on the stores under their remit, for example to see how profitable each store is and which are on track to reach the quarterly profit and revenue goals. For more details see [Store Map](Report_format.md#store-map)
+    - A stores drillthrough page was created to allow regional managers to check on an individual store through clicking on the store bubble on the map. For more details see [Stores Drillthrough](Report_format.md)
+    - A stores tooltip page was created to allow users to see at a glance the profit vs goal for a particular store directly on the map. For more details see [Store Tooltip](Report_format.md)
 8. Cross filtering and navigation:
     - Fix the cross-filtering
     - Finish the navigation bar

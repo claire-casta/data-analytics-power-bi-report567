@@ -112,10 +112,26 @@ This is a detailed product page for the project that provides an in depth look a
     - Category Slicer set to Products[Category] with multi item selection
     - Country Slicer set to Stores[Country] with a Select All opion
   - Added a back button to the rectangle
-  - Create two bookmarks (one with the slicer toolbar showing and one without) and assign as actions to the two buttons to allow the toolbar to be shown and hidden by the user.
+  - Created two bookmarks (one with the slicer toolbar showing and one without) and assigned as actions to the two buttons to allow the toolbar to be shown and hidden by the user.
   
     ![slicer toolbar](images/slicer_product_toolbar.JPG)
 
-Below is a final screenshot of the page. Again the  layout chosen is different to the examples given as a title has been added for easy visual ID of the page that is being viewed as this report could be viewed outside of PowerBI (such as a powerpoint). The key metric gauges are displayed at the tope of the page to draw the viewers attention.
+Below is a final screenshot of the page. Again the layout chosen is different to the examples given as a title has been added for easy visual ID of the page that is being viewed as this report could be viewed outside of PowerBI (such as a powerpoint). The key metric gauges are displayed at the tope of the page to draw the viewers attention.
 
 ![product detail page](images/product_detail_page.JPG)
+
+## Store Map
+
+This is a detailed 
+
+
+![Store Map](images/store_map_page.JPG)
+
+## Stores Drillthrough
+
+
+![Store Drillthrough](images/stores_drillthrough_page.JPG)
+
+## Stores Tooltip
+
+![Stores Tooltip](images/stores_tooltip.JPG)
