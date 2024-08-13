@@ -158,3 +158,21 @@ Country Selection = IF(ISFILTERED(Stores[Country]), SELECTEDVALUE(Stores[Country
 ## Profit per Order
 
 Profit Per Order = 'Measures Table'[Total Profit] / 'Measures Table'[Total Orders]
+
+## Profit Goal
+
+Calculating the previous year profit in the same time period and increasing by 20%
+
+Profit Goal = CALCULATE(TOTALYTD([Total Profit], 'Date'[Date]), SAMEPERIODLASTYEAR('Date'[Date])) * 1.2
+
+## Revenue Goal 
+
+Calculating the previous year revenue in the same time period and increasing by 20%
+
+Revenue Goal = CALCULATE(TOTALYTD([Total Revenue], 'Date'[Date]), SAMEPERIODLASTYEAR('Date'[Date])) * 1.2
+
+## Store Selection
+
+Shows the selected store as selected in the filter (through the drilldown)
+
+Store Selection = IF(ISFILTERED(Stores[Country Region]), SELECTEDVALUE(Stores[Country Region], "No Selection"), "No Selection")

@@ -8,11 +8,9 @@ Recognizing the value of this data, they aim to transform it into actionable ins
 The report will present a high-level business summary tailored for C-suite executives, and also give insights into their highest value customers segmented by sales region, provide a detailed analysis of top-performing products categorised by type against their sales targets, and a visually appealing map visual that spotlights the performance metrics of their retail outlets across different territories.
 
 ## Project Description
-A description of the project: what it does, the aim of the project, and what you learned.
 
-This project .... ADD MORE DETAILS TO THIS BIT
+The exploratory data analysis required a number of steps to be performed to produce the Power BI report as briefed above.
 
-The exploratory data analysis has several steps built into the project:
 1. Import and transform the data from various sources into PowerBI
    
    This involved importing data from Azure SQL database, Azure blob storage, and cloud hosted .csv and .zip files, ensuring appropriate data transformations are done inside Power Query prior to importation into the PowerBI datamodel. Tranformations included column splitting, merging, removal and addition, as well as removal of duplicate data, removal of rows with missing data, combining multiple tables into one, and renaming columns for consistency and clarity and to align with Power Bi naming conventions.
@@ -34,11 +32,11 @@ The exploratory data analysis has several steps built into the project:
     - A report page was designed to allow detailed product level analysis to determine which products are performing well overall and in particular categories and countries. For more details see [Product Detail](Report_format.md#product-detail)
 7. Create a stores map page:
     - A stores map page was created to allow regional managers to easily check on the stores under their remit, for example to see how profitable each store is and which are on track to reach the quarterly profit and revenue goals. For more details see [Store Map](Report_format.md#store-map)
-    - A stores drillthrough page was created to allow regional managers to check on an individual store through clicking on the store bubble on the map. For more details see [Stores Drillthrough](Report_format.md)
-    - A stores tooltip page was created to allow users to see at a glance the profit vs goal for a particular store directly on the map. For more details see [Store Tooltip](Report_format.md)
+    - A stores drillthrough page was created to allow regional managers to check on an individual store through clicking on the store bubble on the map. For more details see [Stores Drillthrough](Report_format.md#stores-drillthrough)
+    - A stores tooltip page was created to allow users to see at a glance the profit vs goal for a particular store directly on the map. For more details see [Store Tooltip](Report_format.md#stores-tooltip)
 8. Cross filtering and navigation:
-    - Fix the cross-filtering
-    - Finish the navigation bar
+    - Cross Filtering was adjusted on a number of the pages to prevent users from being confused if visuals are clicked on. The chnages are detailed in the page sections in [Report_format.md](Report_format.md)
+    - The navigation was completed as detailed [here](Report_format.md#navigation-bar)
 9.  Create metrics for users outside the company using SQL.
 
 
@@ -46,24 +44,21 @@ The exploratory data analysis has several steps built into the project:
 
 Download the repository to your local machine.
 
-ADD MORE INFO
+Download PowerBI Desktop from [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
+
+Open the Data Analytics Power BI Report.pbix in PowerBI desktop
 
 ## File structure of the project
 
-EXAMPLE - EDIT THIS!!!!!
+- /images - folder of images used in documentation and report
+- /.gitignore - file detailing list of files for Git to ignore
+- Data Analytics Power BI Report.pbix - main PowerBI Desktop file for project
+- Dax_measures.md - Markdown file detailing all the measures created in the pbix
+- Dax_tables_columns.md - Markdown file detailing all the tables and columns created in the pbix
+- README.md - this file detailing the project
+- Report_format.md - Markdown file detailing all of the report struture and pages in the pbix
+- Star_Schema_Data_Model.md - Markdown file detailing the data model in the pbix
 
-
-EDA Project
- - analysis_and_visualisations.ipynb (Notebook 2 for this EDA project detailing the analysis of dataframe)
- - correlation matrix.csv (Output by loan_payments_queries.ipynb to allow a more detailed analysis of correlated columns)
- - db_utils_local.py (Code referenced by loan_payments_queries.ipynb for use on the local machine)
- - db_utils.py (Code referenced by loan_payments_queries.ipynb to extract data from the database and download it to a csv file on the local machine)
- - loan_payments_queries.ipynb (Notebook 1 for this EDA project detailing the data preparation before analysis)
- - loan_payments.csv (the original csv file downloaded from the database)
- - mod_loan_payments_post_skew_corr.csv (Output by loan_payments_queries.ipynb to allow further analysis of the dataframe after correction for skew)
- - mod_loan_payments_pre_skew.csv (Output by loan_payments_queries.ipynb to allow further analysis of the dataframe without the alterations to the data produced by skew corrections)
- - README.md (information document to aid understanding of the contents of his repository)
- - requirements.txt (contains a list of all the imports required for the code in this project to work)
 
 ## License information
 This work is licenced under the MIT Licence as outlined below.
