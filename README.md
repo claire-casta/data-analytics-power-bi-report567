@@ -71,6 +71,8 @@ Install SQLTools Postgres driver from the extensions menu or [from this link](ht
 
 ## File structure of the project
 
+- /sql - folder of the sql queries
+- /sql_csv - folder of the sql output csv files
 - /images - folder of images used in documentation and report
 - /.gitignore - file detailing list of files for Git to ignore
 - Data Analytics Power BI Report.pbix - main PowerBI Desktop file for project
@@ -78,6 +80,7 @@ Install SQLTools Postgres driver from the extensions menu or [from this link](ht
 - Dax_tables_columns.md - Markdown file detailing all the tables and columns created in the pbix
 - README.md - this file detailing the project
 - Report_format.md - Markdown file detailing all of the report struture and pages in the pbix
+- SQL_reporting.md - Markddown file detailing the sql reporting
 - Star_Schema_Data_Model.md - Markdown file detailing the data model in the pbix
 
 
