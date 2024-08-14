@@ -21,32 +21,53 @@ The exploratory data analysis required a number of steps to be performed to prod
    -  Create a measures table - A measures table was created and can be seen in the [Star Schema](/Star_Schema_Data_Model.md).
    -  Create key measures - Key measures in DAX are referenced in the [Measures](/Dax_measures.md).
    -  Create date and geography hierarchies - Date and geography hierarchies were created, for more detail see [Date Hierarchy](/Dax_tables_columns.md#date-hierarchy) and [Geography Hierarchy](/Dax_tables_columns.md#geography-columns--hierarchy)
+  
 3. Set up the report:
    - Create the report page - Four report pages were created - see [Report Format](report_format.md)
    - Add a navigation sidebar - A sidebar was created see [Report Format](report_format.md)
+  
 4. Build the customer detail page:
     - A Report page was designed that focused on customer level analysis and contained interactive visuals. For more details see [Customer Detail](Report_format.md#customer-detail-page)
+  
 5. Create an executive summary page:
     - A Report page was designed to provide a high level summary of company-wide performance for the executive team. For more details see [Executive Summary](Report_format.md#executive-summary-page)
+  
 6. Create a product detail page:
     - A report page was designed to allow detailed product level analysis to determine which products are performing well overall and in particular categories and countries. For more details see [Product Detail](Report_format.md#product-detail)
+  
 7. Create a stores map page:
     - A stores map page was created to allow regional managers to easily check on the stores under their remit, for example to see how profitable each store is and which are on track to reach the quarterly profit and revenue goals. For more details see [Store Map](Report_format.md#store-map)
     - A stores drillthrough page was created to allow regional managers to check on an individual store through clicking on the store bubble on the map. For more details see [Stores Drillthrough](Report_format.md#stores-drillthrough)
     - A stores tooltip page was created to allow users to see at a glance the profit vs goal for a particular store directly on the map. For more details see [Store Tooltip](Report_format.md#stores-tooltip)
+  
 8. Cross filtering and navigation:
     - Cross Filtering was adjusted on a number of the pages to prevent users from being confused if visuals are clicked on. The chnages are detailed in the page sections in [Report_format.md](Report_format.md)
     - The navigation was completed as detailed [here](Report_format.md#navigation-bar)
+  
 9.  Create metrics for users outside the company using SQL.
+    - SQL was used to query a postgres database on Azure and extract data without relying on visualisation such as Power BI (for example for external partners and clients). For more information see [SQL_reporting](SQL_reporting.md) 
 
 
 ## Installation & Usage instructions
+
+### PowerBI 
 
 Download the repository to your local machine.
 
 Download PowerBI Desktop from [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 
 Open the Data Analytics Power BI Report.pbix in PowerBI desktop
+
+### VS Code & SQL Tools
+
+VS Code was used to create the documentation, update Git and run the sql code required through the use of the SQLTools and SQLTools Postgres driver extensions
+
+Install VS Code from [Microsoft](https://code.visualstudio.com/download)
+
+Install SQLTools from the extensions menu or [from this link](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
+
+Install SQLTools Postgres driver from the extensions menu or [from this link](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg)
+
 
 ## File structure of the project
 
